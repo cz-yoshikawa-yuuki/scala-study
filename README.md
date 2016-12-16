@@ -1,2 +1,3 @@
 # scala-study
-Scalaのお勉強
+
+- Scalaのお勉強
