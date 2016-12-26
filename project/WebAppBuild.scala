@@ -8,7 +8,9 @@ object WebAppBuild {
 
   val akkaHttpV = "10.0.0"
 
-  val dependency = akkaDependency
+  val circeV = "0.6.0"
+
+  val dependency = akkaDependency ++ otherDependency
 
   def akkaDependency = Seq(
     "com.typesafe.akka" %% "akka-actor" % akkaV,
@@ -21,5 +23,11 @@ object WebAppBuild {
     "com.typesafe.akka" %% "akka-persistence" % akkaV,
     "com.typesafe.akka" %% "akka-slf4j" % akkaV,
     "com.typesafe.akka" %% "akka-testkit" % akkaV % "test"
+  )
+
+  def otherDependency = Seq(
+    "io.circe" %% "circe-core"    % circeV,
+    "io.circe" %% "circe-generic" % circeV,
+    "io.circe" %% "circe-parser"  % circeV
   )
 }

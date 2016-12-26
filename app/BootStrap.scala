@@ -1,7 +1,7 @@
+import adapter.http.system.controller.DebugController
 import akka.actor.ActorSystem
 import akka.event.Logging
 import akka.http.scaladsl.Http
-import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
 
 object BootStrap extends App {
@@ -12,19 +12,8 @@ object BootStrap extends App {
   val port = 8080
   val logger = Logging(system, getClass)
 
-  val routes = path("") {
-    get {
-      complete("ok")
-    }
-  } ~ get {
-    pathPrefix("api") {
-      path("execute" / IntNumber) { num =>
-        get {
-          complete("ok: " + num)
-        }
-      }
-    }
-  }
+  val test = new DebugController()
+  val routes = test.route
 
   val binding = Http().bindAndHandle(routes, interface, port)
 }
