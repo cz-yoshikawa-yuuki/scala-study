@@ -1,0 +1,10 @@
+/project/target/*
+/project/project/*
+/modules/adapter/target/*
+/modules/domain/target/*
+/modules/other/target/*
+/modules/usecase/target/*
+/target/*
+scala-exercise.iml
+.idea/*
+.DS_Store
