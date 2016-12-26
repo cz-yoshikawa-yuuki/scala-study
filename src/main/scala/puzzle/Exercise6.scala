@@ -21,9 +21,14 @@ object Exercise6 {
     numericOps.plus(numericOps.times(n, n), numericOps.one)
 
   def main(args: Array[String]): Unit = {
-    println(applyNMulti(3)(2, nextInt))
-    println(applyNCurried(3)(2)(nextInt))
-//    println(applyNMulti(3)(2.0, nextNumber))　// ビルドエラー
-    println(applyNCurried(3)(2.0)(nextNumber)) //IntelliJではエラー出てるけど、sbtでbuildは通る(Why?)
+    println("applyNMulti(3)(2, nextInt): " + applyNMulti(3)(2, nextInt))
+    println("applyNCurried(3)(2)(nextInt): " + applyNCurried(3)(2)(nextInt))
+    // ビルドエラー: could not find implicit value for parameter numericOps: Numeric[N]
+    // curry化した関数に対して、引数リスト内の引数に対して型推論がうまくいかないため、ここの引数を設定する必要がある
+    // println(applyNMulti(3)(2.0, nextNumber))
+    println("applyNMulti(3)(2.0, nextNumber): could not find implicit value for parameter numericOps: Numeric[N]")
+    println("applyNMulti[Double](3)(2.0, nextNumber): " + applyNMulti[Double](3)(2.0, nextNumber)) // ジェネリック型を指定すればsbtでbuildは通る
+    println("applyNMulti(3)(2.0, nextNumber[Double]): " + applyNMulti(3)(2.0, nextNumber[Double])) // ジェネリック型を指定すればsbtでbuildは通る
+    println("applyNCurried(3)(2.0)(nextNumber): " + applyNCurried(3)(2.0)(nextNumber)) //IntelliJではエラー出てるけど、sbtでbuildは通る(Why?)
   }
 }
