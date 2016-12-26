@@ -1,10 +1,10 @@
 package puzzle
 
 /**
-  * Exercise5.
+  * Puzzle5.
   * - コレクションサイズの合計(collectionによる結果の違いの例)
   */
-object Exercise5 {
+object Puzzle5 {
   def main(args: Array[String]): Unit = {
     val lists = List(Set(1, 2), List(3, 4))
     val sets = Set(List(1, 2), Set(3, 4))

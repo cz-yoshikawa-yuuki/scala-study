@@ -1,13 +1,13 @@
 package puzzle
 
 /**
-  * Exercise3.
+  * Puzzle3.
   * - Constructorの挙動
   *   1. instanceする際の引数が評価される(事前定義を利用していればこのタイミングで評価)
   *   2. SuperClassのConstructorの挙動
   *   3. SubClassのBodyStatementの実行
   */
-object Exercise3 {
+object Puzzle3 {
   def main(args: Array[String]): Unit = {
     println("instance BMember")
     new BMember("Reader")

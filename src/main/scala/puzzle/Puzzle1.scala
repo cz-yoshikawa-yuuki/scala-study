@@ -1,11 +1,11 @@
 package puzzle
 
 /**
-  * Exercise1.
+  * Puzzle1.
   * - mapと関数リテラルについて
   *
   */
-object Exercise1 {
+object Puzzle1 {
   def main(args: Array[String]): Unit = {
     /**
       * args => expr という関数リテラルとして認識されるため

@@ -1,11 +1,11 @@
 package puzzle
 
 /**
-  * Exercise2.
+  * Puzzle2.
   * - 大文字と小文字の挙動の違いについて
   *
   */
-object Exercise2 {
+object Puzzle2 {
 
   def main(args: Array[String]): Unit = {
     val MONTH = 12

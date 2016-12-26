@@ -1,9 +1,9 @@
 package puzzle
 
 /**
-  * Exercise6.
+  * Puzzle6.
   */
-object Exercise6 {
+object Puzzle6 {
 
   def applyNMulti[T](n: Int)(arg: T, f: T => T) =
     (1 to n).foldLeft(arg) { (acc, _) =>

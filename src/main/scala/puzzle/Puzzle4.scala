@@ -1,10 +1,10 @@
 package puzzle
 
 /**
-  * Exercise4.
+  * Puzzle4.
   * - 多段の継承
   */
-object Exercise4 {
+object Puzzle4 {
   def main(args: Array[String]): Unit = {
     new C()
   }
