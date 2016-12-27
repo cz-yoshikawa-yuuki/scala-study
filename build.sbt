@@ -1,6 +1,8 @@
 import sbt._
 import Keys._
 
+name := "webapp-study"
+
 version := "1.0"
 
 lazy val root = (project in file("."))
